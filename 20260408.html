@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026-04-08 台股迎史詩級強彈！記憶體與低軌衛星強勢解析</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f8fafc;
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        /* 台股慣例：紅漲綠跌 */
+        .up { color: #ef4444; font-weight: 700; }
+        .down { color: #22c55e; font-weight: 700; }
+        .bg-up { background-color: #fef2f2; color: #ef4444; border: 1px solid #fca5a5; }
+        .bg-down { background-color: #f0fdf4; color: #22c55e; border: 1px solid #86efac; }
+        
+        /* 活潑的股票膠囊按鈕 */
+        .stock-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background-color: #eff6ff;
+            color: #2563eb;
+            border: 1px solid #bfdbfe;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .stock-pill:hover {
+            background-color: #3b82f6;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(59,130,246,0.3);
+        }
+
+        /* 卡片懸浮效果 */
+        .hover-card {
+            transition: all 0.3s ease;
+        }
+        .hover-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 自訂漸層文字 */
+        .text-gradient {
+            background: linear-gradient(to right, #2563eb, #14b8a6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="text-slate-800 leading-relaxed selection:bg-blue-200">
+
+    <main class="container mx-auto px-4 py-8 max-w-5xl">
+        
+        <!-- 標題區塊 -->
+        <div class="mb-10 text-center">
+            <h1 class="text-4xl md:text-5xl font-black mb-4 leading-tight text-slate-800">
+                台股迎史詩級強彈！ <br class="md:hidden">
+                <span class="text-gradient">記憶體復活 × 低軌狂潮 🚀</span>
+            </h1>
+            <p class="text-slate-500 text-lg font-medium">地緣風險淡化、1531點第二大漲點！空頭低轉強教戰守則</p>
+            <div class="mt-4 flex justify-center gap-2 text-sm font-bold text-slate-500">
+                <span class="bg-slate-200 px-3 py-1 rounded-full"><i class="far fa-calendar-alt mr-1"></i> 2026.04.08</span>
+                <span class="bg-red-50 text-red-600 px-3 py-1 rounded-full"><i class="fas fa-fire mr-1"></i> 報價回溫</span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+            <!-- 左側主欄位 -->
+            <div class="lg:col-span-2 space-y-6">
+                
+                <!-- 大盤解析 -->
+                <section class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover-card">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-blue-100 p-3 rounded-2xl text-blue-600"><i class="fas fa-globe-asia fa-lg"></i></div>
+                        <h2 class="text-2xl font-bold">大盤快照：量價齊揚破趨勢</h2>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-2xl mb-4 border border-slate-100">
+                        <p class="text-slate-700 font-medium leading-relaxed">
+                            中東傳出兩週和談空窗期，台股隨即迎來歷史第二大漲點 <strong class="up">+1531 點</strong>，外資同步大買 1177 億！<br>
+                            技術面正式突破下降趨勢線，並完成 W 底右腳（右腳高於左腳），成交量放大至 8500 億，<span class="text-blue-600 font-bold">明確轉多訊號確立</span>。
+                        </p>
+                    </div>
+                    <div class="flex gap-2 flex-wrap">
+                        <a href="https://tw.stock.yahoo.com/quote/2330.TW" target="_blank" class="stock-pill">2330 台積電</a>
+                        <span class="text-sm text-slate-600 self-center">跳空突破缺口，迎戰 4/16 法說會行情。</span>
+                    </div>
+                    <div class="flex gap-2 flex-wrap mt-2">
+                        <a href="https://tw.stock.yahoo.com/quote/2317.TW" target="_blank" class="stock-pill">2317 鴻海</a>
+                        <span class="text-sm text-slate-600 self-center">終結連跌，跳空破壞下降趨勢，本益比僅 11 倍。</span>
+                    </div>
+                </section>
+
+                <!-- 記憶體大復活 -->
+                <section class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover-card">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-2xl text-indigo-600"><i class="fas fa-memory fa-lg"></i></div>
+                        <h2 class="text-2xl font-bold">記憶體強勢回血：合約價發威</h2>
+                    </div>
+                    <p class="mb-4 text-slate-600">三星 Q1 財報爆發，營收增 68%、<strong class="up">獲利暴增 755%</strong>！與微軟、Google 簽訂三年長約（保底保量、上不封頂），終結過去景氣大起大落的宿命。</p>
+                    
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="border-2 border-slate-100 rounded-2xl p-4 bg-slate-50">
+                            <h3 class="font-bold text-slate-800 mb-2">📊 報價現況解析</h3>
+                            <ul class="text-sm text-slate-600 space-y-2">
+                                <li><i class="fas fa-check-circle text-indigo-400 mr-1"></i> <strong>現貨價：</strong> 雖一度傳陸廠拋售致鬆動，但 4/6 已回溫 (DDR4 +6.8%, DDR5 +9%)。</li>
+                                <li><i class="fas fa-arrow-trend-up text-red-500 mr-1"></i> <strong>NAND Flash：</strong> Q1 漲 50%，Q2 預期續 <span class="up">漲 30%</span>，為目前最強勢次族群。</li>
+                            </ul>
+                        </div>
+                        <div class="border-2 border-indigo-50 rounded-2xl p-4 bg-white">
+                            <h3 class="font-bold text-indigo-700 mb-3">🎯 指標個股追蹤</h3>
+                            <div class="space-y-2">
+                                <div>
+                                    <a href="https://tw.stock.yahoo.com/quote/2337.TW" target="_blank" class="stock-pill mb-1">2337 旺宏</a>
+                                    <p class="text-xs text-slate-500">Flash 漲價受惠，開盤鎖 <span class="up">漲停</span>，最接近前高。</p>
+                                </div>
+                                <div class="pt-2">
+                                    <a href="https://tw.stock.yahoo.com/quote/2408.TW" target="_blank" class="stock-pill">2408 南亞科</a>
+                                    <a href="https://tw.stock.yahoo.com/quote/8299.TW" target="_blank" class="stock-pill">8299 群聯</a>
+                                    <p class="text-xs text-slate-500 mt-1">線型剛落底，等待突破下降趨勢線及法人回補。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 優雅工商時間 -->
+                <div class="relative bg-white rounded-3xl p-1 overflow-hidden shadow-sm hover-card border border-rose-100">
+                    <div class="absolute inset-0 bg-gradient-to-r from-rose-50 to-orange-50 opacity-50"></div>
+                    <div class="relative flex flex-col sm:flex-row items-center justify-between p-6 gap-6">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-2">
+                                <i class="fas fa-leaf text-rose-400"></i>
+                                <span class="text-rose-600 font-bold text-sm tracking-widest">STEYA 質感選物</span>
+                            </div>
+                            <h3 class="font-black text-xl text-slate-800 mb-2">操盤需要底氣，身體需要包容 ✨</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                市場震盪考驗著心智，而舒適的穿著能穩定您的節奏。<br>
+                                <strong class="text-rose-500">Steya 運動內衣 100% MIT 台灣製造</strong>，以絕佳的無壓支撐與親膚觸感，讓您在專注盯盤或日常伸展時，都能感受最優雅的包覆與安定。
+                            </p>
+                        </div>
+                        <a href="https://steya.com.tw" target="_blank" class="shrink-0 bg-rose-500 text-white font-bold py-3 px-6 rounded-full hover:bg-rose-600 transition shadow-lg shadow-rose-200">
+                            體驗極致舒適 <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 低軌衛星與 PCB -->
+                <section class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover-card">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-teal-100 p-3 rounded-2xl text-teal-600"><i class="fas fa-satellite fa-lg"></i></div>
+                        <h2 class="text-2xl font-bold">SpaceX 狂潮：低軌與銅箔基板</h2>
+                    </div>
+                    <p class="mb-4 text-slate-600">SpaceX 挑戰史上最大 IPO (估值看 2 兆美元)，且低軌衛星面臨「4-5年換機潮」，龐大商機帶動網通與 PCB 族群發動！</p>
+                    
+                    <ul class="space-y-4 mb-6">
+                        <li class="flex gap-4 items-start bg-slate-50 p-4 rounded-2xl">
+                            <div class="text-2xl pt-1">📡</div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 mb-1">低軌衛星網通強勢指標</h4>
+                                <a href="https://tw.stock.yahoo.com/quote/3491.TW" target="_blank" class="stock-pill mb-1">3491 昇達科</a>
+                                <a href="https://tw.stock.yahoo.com/quote/6285.TW" target="_blank" class="stock-pill mb-1">6285 啟碁</a>
+                                <p class="text-sm text-slate-600 mt-1">昇達科無懼大盤回檔，強勢守住季線；啟碁投信連買，突破前高表態。</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4 items-start bg-slate-50 p-4 rounded-2xl">
+                            <div class="text-2xl pt-1">⚡</div>
+                            <div>
+                                <h4 class="font-bold text-slate-800 mb-1">PCB / CCL (銅箔基板) 漲價潮</h4>
+                                <a href="https://tw.stock.yahoo.com/quote/6274.TW" target="_blank" class="stock-pill mr-1 mb-1">6274 台燿</a>
+                                <a href="https://tw.stock.yahoo.com/quote/5340.TW" target="_blank" class="stock-pill mr-1 mb-1">5340 建榮</a>
+                                <a href="https://tw.stock.yahoo.com/quote/5475.TW" target="_blank" class="stock-pill mb-1">5475 德宏</a>
+                                <p class="text-sm text-slate-600 mt-1">北美 CSP 資本支出上修，玻纖布與銅箔供不應求。台燿強勢創高；建榮受惠高階 Glass 題材剛突破；德宏具軍工/衛星低價補漲優勢。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+            </div>
+
+            <!-- 右側側邊欄 -->
+            <div class="space-y-6">
+                
+                <!-- 技術面教學心法 -->
+                <div class="bg-slate-800 text-white p-6 rounded-3xl shadow-lg relative overflow-hidden">
+                    <div class="absolute -right-6 -top-6 text-slate-700 opacity-50"><i class="fas fa-chart-line text-8xl"></i></div>
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold mb-4 text-yellow-400"><i class="fas fa-book-open mr-2"></i> 專家實戰：空頭低轉強 3 訊號</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="bg-slate-700/50 p-3 rounded-xl border border-slate-600">
+                                <div class="font-bold text-yellow-300 mb-1">1. 爆大量長紅 / 跳空反彈</div>
+                                <p class="text-sm text-slate-300 mb-2">止跌第一訊號，進貨量出現，關鍵低點不破即可列入觀察。</p>
+                                <div class="flex gap-2">
+                                    <a href="https://tw.stock.yahoo.com/quote/2454.TW" target="_blank" class="text-xs bg-slate-600 px-2 py-1 rounded hover:bg-slate-500">2454 聯發科</a>
+                                    <a href="https://tw.stock.yahoo.com/quote/2301.TW" target="_blank" class="text-xs bg-slate-600 px-2 py-1 rounded hover:bg-slate-500">2301 光寶科</a>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-slate-700/50 p-3 rounded-xl border border-slate-600">
+                                <div class="font-bold text-yellow-300 mb-1">2. W底成型 (底底高)</div>
+                                <p class="text-sm text-slate-300 mb-2">右腳不破左腳，均線逐漸走平化解賣壓，等待帶量突破。</p>
+                                <div class="flex gap-2">
+                                    <a href="https://tw.stock.yahoo.com/quote/4979.TW" target="_blank" class="text-xs bg-slate-600 px-2 py-1 rounded hover:bg-slate-500">4979 華星光</a>
+                                    <a href="https://tw.stock.yahoo.com/quote/8358.TW" target="_blank" class="text-xs bg-slate-600 px-2 py-1 rounded hover:bg-slate-500">8358 金居</a>
+                                </div>
+                            </div>
+
+                            <div class="bg-slate-700/50 p-3 rounded-xl border border-slate-600">
+                                <div class="font-bold text-yellow-300 mb-1">3. 多頭架構確認</div>
+                                <p class="text-sm text-slate-300">突破頸線，頭高底高，均線發散向上。此階段拉回即是買點，順勢操作勝率最高！</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 數據視覺化圖表 -->
+                <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover-card">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-bold text-slate-800"><i class="fas fa-chart-bar text-indigo-500 mr-2"></i> NAND Flash 漲幅預期</h3>
+                        <span class="bg-indigo-100 text-indigo-700 text-xs font-bold px-2 py-1 rounded">報價飆升</span>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-2">今年呈現逐季雙位數跳增，帶動相關模組與製造廠毛利跳升。</p>
+                    <div class="h-48 w-full">
+                        <canvas id="nandChart"></canvas>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="text-center py-8 text-slate-400 text-sm mt-8 border-t border-slate-200">
+        <p class="mb-2"><i class="fas fa-chart-line"></i> 財經陪讀筆記 | 2026.04.08</p>
+        <p class="text-xs">內容僅供學習與交流參考，不構成任何投資建議。投資有風險，入市須謹慎。</p>
+    </footer>
+
+    <!-- Chart.js 視覺化圖表設定 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Chart.defaults.font.family = "'Noto Sans TC', sans-serif";
+            Chart.defaults.color = '#64748b'; 
+
+            // NAND Flash 預期漲幅
+            const ctxNand = document.getElementById('nandChart').getContext('2d');
+            new Chart(ctxNand, {
+                type: 'line',
+                data: {
+                    labels: ['25 Q4', '26 Q1(實績)', '26 Q2(預估)', '26 Q3(預估)'],
+                    datasets: [{
+                        label: '季增率 QoQ (%)',
+                        data: [0, 50, 30, 7], // Base 0 just for visual flow
+                        borderColor: '#ef4444', // Red for Up
+                        backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                        borderWidth: 3,
+                        pointBackgroundColor: '#ef4444',
+                        pointRadius: 5,
+                        fill: true,
+                        tension: 0.3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { 
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.parsed.y + '%';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: { 
+                            beginAtZero: true, 
+                            grid: { color: '#f1f5f9', drawBorder: false },
+                            ticks: { callback: function(value) { return value + '%' } }
+                        },
+                        x: { grid: { display: false, drawBorder: false } }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
