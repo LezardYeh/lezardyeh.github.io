@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026-04-09 台股拉尾盤 中小領軍與 ABC 伏兵策略</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f8fafc;
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        /* 台股慣例：紅漲綠跌 */
+        .up { color: #ef4444; font-weight: 700; }
+        .down { color: #22c55e; font-weight: 700; }
+        .bg-up-light { background-color: #fef2f2; border-color: #fecaca; }
+        .bg-down-light { background-color: #f0fdf4; border-color: #bbf7d0; }
+        
+        /* 活潑的股票膠囊按鈕 */
+        .stock-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background-color: #eff6ff;
+            color: #2563eb;
+            border: 1px solid #bfdbfe;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .stock-pill:hover {
+            background-color: #3b82f6;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(59,130,246,0.3);
+        }
+
+        /* 卡片懸浮效果 */
+        .hover-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hover-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 漸層標題 */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="text-slate-800 leading-relaxed selection:bg-indigo-200">
+
+    <main class="container mx-auto px-4 py-8 max-w-6xl">
+        
+        <!-- 標題區塊 -->
+        <div class="mb-10 text-center">
+            <h1 class="text-4xl md:text-5xl font-black mb-4 leading-tight text-slate-800 tracking-tight">
+                台股拉尾盤 <span class="bg-gradient-to-r from-indigo-500 to-purple-600 text-gradient">中小精兵突圍 🚀</span>
+            </h1>
+            <p class="text-slate-500 text-lg font-medium">CPO 補漲、台積電法說會伏兵，與 ABC 產業價值選股全解析</p>
+            <div class="mt-4 inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-200 text-sm font-bold text-slate-600">
+                <i class="far fa-calendar-alt text-indigo-500"></i> 2026.04.09
+                <span class="w-1 h-1 bg-slate-300 rounded-full mx-1"></span>
+                <i class="fas fa-chart-line text-red-500"></i> 加權指數 <span class="up">+99點</span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+            <!-- 左側主欄位 (佔 2 欄) -->
+            <div class="lg:col-span-2 space-y-6">
+                
+                <!-- 大盤解析 -->
+                <section class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 hover-card">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-indigo-100 p-3 rounded-2xl text-indigo-600"><i class="fas fa-globe fa-lg"></i></div>
+                        <h2 class="text-2xl font-bold">市場快照：選股不選市</h2>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                            <h3 class="font-bold text-slate-700 mb-2"><i class="fas fa-shield-alt text-slate-400 mr-1"></i> 籌碼與地緣政治</h3>
+                            <p class="text-sm text-slate-600">
+                                雖然以色列與中東局勢反覆，但外資今日強力 <span class="up">買超逾 300 億</span>。內資更是完全無懼，OTC 櫃買指數持續向歷史高點挺進，展現極強韌性。
+                            </p>
+                        </div>
+                        <div class="bg-up-light p-5 rounded-2xl border">
+                            <h3 class="font-bold text-red-700 mb-2"><i class="fas fa-fire text-red-500 mr-1"></i> 盤面主流熱度</h3>
+                            <p class="text-sm text-slate-600">
+                                上市櫃出現 <strong class="text-red-600">60多家亮燈漲停</strong>！資金高度集中在中小型股、設備廠、矽光子 (CPO) 與低軌衛星等熱門題材。
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 台積電大聯盟 -->
+                <section class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 hover-card">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-red-100 p-3 rounded-2xl text-red-600"><i class="fas fa-microchip fa-lg"></i></div>
+                        <h2 class="text-2xl font-bold">台積電法說會前哨站：設備與封測</h2>
+                    </div>
+                    <p class="mb-5 text-slate-600">外資預估台積電明年資本支出上看 700 億美元，高階設備與先進封測訂單外溢，投信持續卡位：</p>
+                    
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <!-- 設備廠 -->
+                        <div class="border-2 border-slate-50 rounded-2xl p-5 bg-white shadow-sm">
+                            <h3 class="font-bold text-slate-800 mb-3"><i class="fas fa-cogs text-slate-400 mr-1"></i> 檢測設備低檔轉機</h3>
+                            <div class="mb-3">
+                                <a href="https://tw.stock.yahoo.com/quote/3030.TW" target="_blank" class="stock-pill">3030 德律</a>
+                            </div>
+                            <ul class="text-sm text-slate-600 space-y-2">
+                                <li><i class="fas fa-check text-green-500 mr-1"></i> 相對已飛天設備股，處於橫盤整理。</li>
+                                <li><i class="fas fa-check text-green-500 mr-1"></i> Q1 營收季增 17%、年增 25%。</li>
+                                <li><i class="fas fa-check text-green-500 mr-1"></i> 預估 EPS 12元，本益比不到 20 倍。</li>
+                            </ul>
+                        </div>
+                        <!-- 封測廠 -->
+                        <div class="border-2 border-slate-50 rounded-2xl p-5 bg-white shadow-sm">
+                            <h3 class="font-bold text-slate-800 mb-3"><i class="fas fa-box text-slate-400 mr-1"></i> 封測跨入矽光子</h3>
+                            <div class="mb-3">
+                                <a href="https://tw.stock.yahoo.com/quote/3264.TW" target="_blank" class="stock-pill">3264 欣銓</a>
+                            </div>
+                            <ul class="text-sm text-slate-600 space-y-2">
+                                <li><i class="fas fa-check text-green-500 mr-1"></i> 成立「矽光子測量專屬實驗室」。</li>
+                                <li><i class="fas fa-check text-green-500 mr-1"></i> Q4 營收年增 90%，毛利率攀升。</li>
+                                <li><i class="fas fa-check text-green-500 mr-1"></i> K線突破換手成功，投信開始加碼。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 優雅工商時間 -->
+                <div class="relative bg-white rounded-3xl p-1 overflow-hidden shadow-sm hover-card border border-teal-100">
+                    <div class="absolute inset-0 bg-gradient-to-r from-teal-50 to-blue-50 opacity-50"></div>
+                    <div class="relative flex flex-col sm:flex-row items-center justify-between p-6 md:p-8 gap-6">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-2">
+                                <i class="fas fa-leaf text-teal-500"></i>
+                                <span class="text-teal-600 font-bold text-sm tracking-widest">STEYA 質感生活提案</span>
+                            </div>
+                            <h3 class="font-black text-2xl text-slate-800 mb-2">操盤需要專注，身體需要呵護</h3>
+                            <p class="text-slate-600 leading-relaxed text-sm">
+                                長時間盯盤、分析數據，別讓僵硬的肩頸成為負擔。<br>
+                                換上 <strong class="text-teal-600">Steya 運動內衣（100% MIT 台灣製造）</strong>，體驗極致親膚與無壓支撐。無論是早晨的瑜伽喚醒，還是激烈震盪的看盤時光，都能讓您保持最從容優雅的狀態。
+                            </p>
+                        </div>
+                        <a href="https://steya.com.tw" target="_blank" class="shrink-0 bg-teal-500 text-white font-bold py-3 px-8 rounded-full hover:bg-teal-600 transition duration-300 shadow-lg shadow-teal-200 transform hover:-translate-y-1">
+                            探索無壓體驗 <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ABC 伏兵產業 -->
+                <section class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 hover-card">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-amber-100 p-3 rounded-2xl text-amber-600"><i class="fas fa-lightbulb fa-lg"></i></div>
+                        <h2 class="text-2xl font-bold">ABC 產業：價值選股浮現</h2>
+                    </div>
+                    <p class="mb-6 text-slate-600">資金從高檔股轉入相對委屈的優質股，留意 <strong>BBU (備用電池)</strong> 與 <strong>Chemical (特化)</strong> 的落後補漲潛力：</p>
+                    
+                    <div class="space-y-4">
+                        <!-- BBU 族群 -->
+                        <div class="flex flex-col md:flex-row gap-4 items-start bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                            <div class="text-3xl pt-1">🔋</div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-lg mb-2">B (BBU / 電源) - AI 伺服器高壓直流電需求</h3>
+                                <div class="flex flex-wrap gap-2 mb-3">
+                                    <a href="https://tw.stock.yahoo.com/quote/2308.TW" target="_blank" class="stock-pill">2308 台達電</a>
+                                    <a href="https://tw.stock.yahoo.com/quote/3211.TW" target="_blank" class="stock-pill">3211 順達</a>
+                                    <a href="https://tw.stock.yahoo.com/quote/2301.TW" target="_blank" class="stock-pill">2301 光寶科</a>
+                                </div>
+                                <p class="text-sm text-slate-600">
+                                    <strong class="text-slate-800">台達電</strong> 創高帶動族群比價效應。<strong class="text-indigo-600">光寶科</strong> 目前股價位階極低，AI 產品佔比預計拉升至 30% 以上，2026年預估 EPS 本益比不到 18 倍，極具長線投資價值。
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 化學 特化族群 -->
+                        <div class="flex flex-col md:flex-row gap-4 items-start bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                            <div class="text-3xl pt-1">🧪</div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-lg mb-2">C (Chemical) - 半導體特用化學轉型</h3>
+                                <div class="flex flex-wrap gap-2 mb-3">
+                                    <a href="https://tw.stock.yahoo.com/quote/1717.TW" target="_blank" class="stock-pill">1717 長興</a>
+                                    <a href="https://tw.stock.yahoo.com/quote/4766.TW" target="_blank" class="stock-pill">4766 南寶</a>
+                                </div>
+                                <p class="text-sm text-slate-600">
+                                    <strong class="text-slate-800">南寶</strong> 切入半導體特化與封測供應鏈 (與新應材合資)。預估今年 EPS 挑戰 30 元，毛利高達 34%，以特化股普遍 20-50 倍本益比來看，目前 11 倍本益比嚴重低估，均線糾結後爆量首根發動。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- 右側側邊欄 (佔 1 欄) -->
+            <div class="space-y-6">
+                
+                <!-- 強弱勢對比圖 -->
+                <div class="bg-slate-800 text-white p-6 rounded-3xl shadow-lg relative overflow-hidden">
+                    <div class="absolute -right-4 -top-4 text-slate-700 opacity-40"><i class="fas fa-balance-scale text-8xl"></i></div>
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold mb-4 text-amber-400"><i class="fas fa-exchange-alt mr-2"></i> 產業汰弱留強</h3>
+                        
+                        <div class="mb-4">
+                            <div class="flex items-center gap-2 mb-2 text-red-400 font-bold">
+                                <i class="fas fa-arrow-up"></i> 強勢族群 (拉回找買點)
+                            </div>
+                            <ul class="text-sm space-y-2 text-slate-300">
+                                <li class="flex justify-between border-b border-slate-700 pb-1">
+                                    <span>低軌衛星 (SpaceX IPO)</span> <span>華通、同欣電</span>
+                                </li>
+                                <li class="flex justify-between border-b border-slate-700 pb-1">
+                                    <span>矽光子 CPO (老三老四)</span> <span>前鼎、華星光</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>功率半導體 (漲價)</span> <span>強茂、台半</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-slate-700/50 p-3 rounded-xl border border-slate-600">
+                            <div class="flex items-center gap-2 mb-2 text-green-400 font-bold">
+                                <i class="fas fa-arrow-down"></i> 弱勢族群 (反彈須減碼)
+                            </div>
+                            <p class="text-sm text-slate-300 mb-2">
+                                <strong>記憶體 (DDR4/Flash)</strong>：外資與投信聯手棄守，技術面出現多個空方大黑K，如南亞科、旺宏、群聯，頭部型態已現。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 估值對比圖表 -->
+                <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover-card">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-bold"><i class="fas fa-chart-bar text-purple-500 mr-2"></i> 隱藏版價值股本益比</h3>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-4">高成長、低估值的標的，具備長線保護短線優勢。</p>
+                    
+                    <div class="h-48 w-full relative">
+                        <canvas id="valueChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- 操盤心法 -->
+                <div class="bg-orange-50 p-6 rounded-3xl shadow-sm border border-orange-100 hover-card">
+                    <h3 class="text-lg font-bold text-orange-800 mb-3"><i class="fas fa-chess-knight mr-2"></i> 冠軍操盤手戰略</h3>
+                    <ul class="text-sm text-orange-900 space-y-3 leading-relaxed">
+                        <li>🎯 <strong>水位調升：</strong> 均線站穩，現股水位應拉高至 7 成以上。</li>
+                        <li>🛡️ <strong>選擇權避險：</strong> 面對大漲過後與地緣風險，適度搭配 Buy Put 鎖定獲利風險。</li>
+                        <li>🔄 <strong>看高做低：</strong> 不追「飛龍在天」的飆股，尋找基本面強但還在「均線糾結」或剛出量的伏兵。</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 盈利天下社群區塊 -->
+        <section class="mt-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 hover-card">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="bg-blue-100 p-3 rounded-2xl text-blue-600"><i class="fas fa-users fa-lg"></i></div>
+                <h2 class="text-2xl font-bold">盈利天下社群：重點與金句</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- 三句話看重點 -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-slate-800 flex items-center"><span class="text-xl mr-2">📌</span> 三句話看重點</h3>
+                    <ul class="space-y-4">
+                        <li class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                            <span class="font-bold text-red-500 mr-1">台股硬邦邦：</span>
+                            <span class="text-slate-600 text-sm">美股費半噴發帶動光通訊與設備股狂歡，興櫃「恆勁」直接上演 30% 暴走秀，台股依然是千萬富豪的生產基地。</span>
+                        </li>
+                        <li class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                            <span class="font-bold text-indigo-500 mr-1">雜訊滿天飛：</span>
+                            <span class="text-slate-600 text-sm">以色列、伊朗跟川普輪流出來「放屁」干擾情緒，讓一堆「觀望大師」在賣掉與買回之間反覆橫跳。</span>
+                        </li>
+                        <li class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                            <span class="font-bold text-amber-500 mr-1">信仰與奇蹟：</span>
+                            <span class="text-slate-600 text-sm">有人專精「飆股雜貨店」快進快出，有人死抱「兆大哥」一年等翻倍，結論是：有錢買、敢買才是真的。</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 社群金句選 -->
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-slate-800 flex items-center"><span class="text-xl mr-2">💬</span> 社群金句選</h3>
+                    <div class="space-y-4">
+                        <div class="relative bg-indigo-50 p-5 rounded-2xl border border-indigo-100">
+                            <i class="fas fa-quote-left absolute top-4 right-4 text-indigo-200 text-2xl"></i>
+                            <p class="text-slate-700 font-medium mb-2 relative z-10">「你以為我在開雜貨店嗎？我是飆股雜貨店！」</p>
+                            <p class="text-xs text-slate-500 text-right">— <strong class="text-indigo-600">勳（瑪瑪莎）</strong> 形容口袋名單太多時的豪氣</p>
+                        </div>
+                        <div class="relative bg-blue-50 p-5 rounded-2xl border border-blue-100">
+                            <i class="fas fa-quote-left absolute top-4 right-4 text-blue-200 text-2xl"></i>
+                            <p class="text-slate-700 font-medium mb-2 relative z-10">「抱上抱下會抱到懷疑人生，所以我只能相信一個奇蹟。」</p>
+                            <p class="text-xs text-slate-500 text-right">— <strong class="text-blue-600">米~</strong> 訴說長線大戶在重壓死抱時的內心掙扎</p>
+                        </div>
+                        <div class="relative bg-emerald-50 p-5 rounded-2xl border border-emerald-100">
+                            <i class="fas fa-quote-left absolute top-4 right-4 text-emerald-200 text-2xl"></i>
+                            <p class="text-slate-700 font-medium mb-2 relative z-10">「川普講話就跟放屁一樣，但他開火可能是因為自己也賺一波了。」</p>
+                            <p class="text-xs text-slate-500 text-right">— <strong class="text-emerald-600">樺小陳</strong> 對地緣政治雜訊的犀利見解</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="bg-slate-100 mt-12 py-8 border-t border-slate-200">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-slate-500 font-bold mb-2"><i class="fas fa-book-open text-indigo-400 mr-1"></i> 財經精選筆記</p>
+            <p class="text-xs text-slate-400">本筆記內容僅供學習與資訊交流，不構成任何具體投資建議。投資理財有賺有賠，請自行評估風險。</p>
+        </div>
+    </footer>
+
+    <!-- Chart.js 圖表設定 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Chart.defaults.font.family = "'Noto Sans TC', sans-serif";
+            Chart.defaults.color = '#64748b'; 
+
+            // 價值股本益比圖表
+            const ctxValue = document.getElementById('valueChart').getContext('2d');
+            new Chart(ctxValue, {
+                type: 'bar',
+                data: {
+                    labels: ['南寶 (特
