@@ -269,76 +269,66 @@
             </div>
         </div>
 
-        <!-- 盈利天下社群區塊 -->
-        <section class="mt-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 hover-card">
-            <div class="flex items-center gap-3 mb-6">
-                <div class="bg-blue-100 p-3 rounded-2xl text-blue-600"><i class="fas fa-users fa-lg"></i></div>
-                <h2 class="text-2xl font-bold">盈利天下社群：重點與金句</h2>
-            </div>
+        <!-- 盈利天下 社群內容區塊 (新增) -->
+        <section class="mt-10 bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-6 md:p-10 shadow-xl text-white hover-card relative overflow-hidden">
+            <!-- 裝飾背景圖示 -->
+            <div class="absolute -right-10 -bottom-10 text-slate-700 opacity-20"><i class="fas fa-comments text-[15rem]"></i></div>
 
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- 三句話看重點 -->
-                <div>
-                    <h3 class="font-bold text-lg mb-4 text-slate-800 flex items-center"><span class="text-xl mr-2">📌</span> 三句話看重點</h3>
-                    <ul class="space-y-4">
-                        <li class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                            <span class="font-bold text-red-500 mr-1">台股硬邦邦：</span>
-                            <span class="text-slate-600 text-sm">美股費半噴發帶動光通訊與設備股狂歡，興櫃「恆勁」直接上演 30% 暴走秀，台股依然是千萬富豪的生產基地。</span>
-                        </li>
-                        <li class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                            <span class="font-bold text-indigo-500 mr-1">雜訊滿天飛：</span>
-                            <span class="text-slate-600 text-sm">以色列、伊朗跟川普輪流出來「放屁」干擾情緒，讓一堆「觀望大師」在賣掉與買回之間反覆橫跳。</span>
-                        </li>
-                        <li class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                            <span class="font-bold text-amber-500 mr-1">信仰與奇蹟：</span>
-                            <span class="text-slate-600 text-sm">有人專精「飆股雜貨店」快進快出，有人死抱「兆大哥」一年等翻倍，結論是：有錢買、敢買才是真的。</span>
-                        </li>
-                    </ul>
+            <div class="relative z-10">
+                <div class="flex items-center gap-3 mb-8 border-b border-slate-700 pb-5">
+                    <div class="bg-rose-500/20 p-3 rounded-2xl text-rose-400"><i class="fas fa-users fa-lg"></i></div>
+                    <h2 class="text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-orange-300">「盈利天下」社群熱議精華</h2>
                 </div>
 
-                <!-- 社群金句選 -->
-                <div>
-                    <h3 class="font-bold text-lg mb-4 text-slate-800 flex items-center"><span class="text-xl mr-2">💬</span> 社群金句選</h3>
-                    <div class="space-y-4">
-                        <div class="relative bg-indigo-50 p-5 rounded-2xl border border-indigo-100">
-                            <i class="fas fa-quote-left absolute top-4 right-4 text-indigo-200 text-2xl"></i>
-                            <p class="text-slate-700 font-medium mb-2 relative z-10">「你以為我在開雜貨店嗎？我是飆股雜貨店！」</p>
-                            <p class="text-xs text-slate-500 text-right">— <strong class="text-indigo-600">勳（瑪瑪莎）</strong> 形容口袋名單太多時的豪氣</p>
-                        </div>
-                        <div class="relative bg-blue-50 p-5 rounded-2xl border border-blue-100">
-                            <i class="fas fa-quote-left absolute top-4 right-4 text-blue-200 text-2xl"></i>
-                            <p class="text-slate-700 font-medium mb-2 relative z-10">「抱上抱下會抱到懷疑人生，所以我只能相信一個奇蹟。」</p>
-                            <p class="text-xs text-slate-500 text-right">— <strong class="text-blue-600">米~</strong> 訴說長線大戶在重壓死抱時的內心掙扎</p>
-                        </div>
-                        <div class="relative bg-emerald-50 p-5 rounded-2xl border border-emerald-100">
-                            <i class="fas fa-quote-left absolute top-4 right-4 text-emerald-200 text-2xl"></i>
-                            <p class="text-slate-700 font-medium mb-2 relative z-10">「川普講話就跟放屁一樣，但他開火可能是因為自己也賺一波了。」</p>
-                            <p class="text-xs text-slate-500 text-right">— <strong class="text-emerald-600">樺小陳</strong> 對地緣政治雜訊的犀利見解</p>
-                        </div>
+                <div class="grid md:grid-cols-2 gap-10">
+                    
+                    <!-- 左側：三句話看重點 -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-5 text-slate-200 flex items-center gap-2">
+                            <i class="fas fa-thumbtack text-rose-400"></i> 三句話看重點
+                        </h3>
+                        <ul class="space-y-4">
+                            <li class="bg-slate-800/60 p-4 rounded-xl border border-slate-700">
+                                <strong class="text-rose-400 block mb-1 text-lg">📈 台股硬邦邦：</strong>
+                                <span class="text-slate-300 text-sm leading-relaxed">美股費半噴發帶動光通訊與設備股狂歡，興櫃「恆勁」直接上演 30% 暴走秀，台股依然是千萬富豪的生產基地。</span>
+                            </li>
+                            <li class="bg-slate-800/60 p-4 rounded-xl border border-slate-700">
+                                <strong class="text-amber-400 block mb-1 text-lg">📢 雜訊滿天飛：</strong>
+                                <span class="text-slate-300 text-sm leading-relaxed">以色列、伊朗跟川普輪流出來「放屁」干擾情緒，讓一堆「觀望大師」在賣掉與買回之間反覆橫跳。</span>
+                            </li>
+                            <li class="bg-slate-800/60 p-4 rounded-xl border border-slate-700">
+                                <strong class="text-teal-400 block mb-1 text-lg">✨ 信仰與奇蹟：</strong>
+                                <span class="text-slate-300 text-sm leading-relaxed">有人專精「飆股雜貨店」快進快出，有人死抱「兆大哥」一年等翻倍，結論是：有錢買、敢買才是真的。</span>
+                            </li>
+                        </ul>
                     </div>
-                </div>
-            </div>
-        </section>
 
-    </main>
+                    <!-- 右側：社群金句選 -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-5 text-slate-200 flex items-center gap-2">
+                            <i class="fas fa-quote-left text-orange-400"></i> 社群金句選
+                        </h3>
+                        <div class="space-y-6">
+                            
+                            <!-- 金句 1 -->
+                            <div class="relative pl-6 py-2 border-l-4 border-rose-500 bg-slate-800/30 rounded-r-xl pr-4">
+                                <p class="text-lg font-medium text-slate-100 mb-3 leading-snug">
+                                    「你以為我在開雜貨店嗎？我是飆股雜貨店！」
+                                </p>
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 rounded-full bg-rose-900/50 flex items-center justify-center text-rose-300 font-bold text-xs border border-rose-700">勳</div>
+                                    <p class="text-sm text-slate-400">
+                                        <strong class="text-slate-300">勳（瑪瑪莎）</strong> <span class="text-slate-500 text-xs ml-1">形容口袋名單太多時的豪氣</span>
+                                    </p>
+                                </div>
+                            </div>
 
-    <!-- 頁尾 -->
-    <footer class="bg-slate-100 mt-12 py-8 border-t border-slate-200">
-        <div class="container mx-auto px-4 text-center">
-            <p class="text-slate-500 font-bold mb-2"><i class="fas fa-book-open text-indigo-400 mr-1"></i> 財經精選筆記</p>
-            <p class="text-xs text-slate-400">本筆記內容僅供學習與資訊交流，不構成任何具體投資建議。投資理財有賺有賠，請自行評估風險。</p>
-        </div>
-    </footer>
-
-    <!-- Chart.js 圖表設定 -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            Chart.defaults.font.family = "'Noto Sans TC', sans-serif";
-            Chart.defaults.color = '#64748b';  
-
-            // 價值股本益比圖表
-            const ctxValue = document.getElementById('valueChart').getContext('2d');
-            new Chart(ctxValue, {
-                type: 'bar',
-                data: {
-                    labels: ['南寶 (特
+                            <!-- 金句 2 -->
+                            <div class="relative pl-6 py-2 border-l-4 border-blue-500 bg-slate-800/30 rounded-r-xl pr-4">
+                                <p class="text-lg font-medium text-slate-100 mb-3 leading-snug">
+                                    「抱上抱下會抱到懷疑人生，所以我只能相信一個奇蹟。」
+                                </p>
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 rounded-full bg-blue-900/50 flex items-center justify-center text-blue-300 font-bold text-xs border border-blue-700">米</div>
+                                    <p class="text-sm text-slate-400">
+                             
