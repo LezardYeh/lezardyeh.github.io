@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026-04-14 陪讀筆記 | 台股創新高 36341！法說行情與落後補漲全解析</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f8fafc;
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        /* 台股慣例：紅漲綠跌 */
+        .up { color: #ef4444; font-weight: 700; }
+        .down { color: #22c55e; font-weight: 700; }
+        
+        /* 股票膠囊按鈕 */
+        .stock-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background-color: #eff6ff;
+            color: #2563eb;
+            border: 1px solid #bfdbfe;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .stock-pill:hover {
+            background-color: #3b82f6;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(59,130,246,0.3);
+        }
+
+        /* 卡片懸浮效果 */
+        .hover-card {
+            transition: all 0.3s ease;
+        }
+        .hover-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="text-slate-800 leading-relaxed selection:bg-blue-200">
+
+    <main class="container mx-auto px-4 py-8 max-w-6xl">
+        
+        <div class="mb-10 text-center">
+            <div class="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-bold mb-4">
+                <i class="far fa-calendar-alt mr-1"></i> 2026.04.14 盤後深度解析
+            </div>
+            <h1 class="text-4xl md:text-5xl font-black mb-4 leading-tight text-slate-800">
+                台股飆上 36,341 新高！ <br class="md:hidden">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500">法說行情啟動 資金轉入低基期 🚀</span>
+            </h1>
+            <p class="text-slate-500 text-lg font-medium">大立光點燈、國巨法說前瞻、機器人強勢表態與強勢股拉回戰略</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+            <div class="lg:col-span-2 space-y-6">
+                
+                <section class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover-card">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-blue-100 p-3 rounded-2xl text-blue-600"><i class="fas fa-chart-line fa-lg"></i></div>
+                        <h2 class="text-2xl font-bold">總經與大盤：利空鈍化 W底突破</h2>
+                    </div>
+                    <div class="bg-slate-50 p-5 rounded-2xl mb-4 border border-slate-100">
+                        <ul class="text-slate-700 font-medium leading-relaxed space-y-2 list-disc list-inside">
+                            <li><strong>地緣政治降溫：</strong> 川普選情考量放緩強硬態度，中東局勢利空鈍化，美股三大指數皆站回季線。</li>
+                            <li><strong>型態完美突破：</strong> 台股從 31,700 點打出漂亮的 <strong>W底 (WD)</strong>，突破頸線後一路軋空至 <strong>36,341</strong> 歷史新高！</li>
+                            <li><strong>紅吸效應：</strong> 資金高度集中在全值股 (台積電、聯發科、台達電)。</li>
+                            <li class="text-red-500 font-bold">⚠️ 短線警訊：波段漲幅已達 4,000 多點，週四台積電法說會後，需提防短線獲利了結的震盪。</li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <div class="p-4 bg-white border border-slate-200 rounded-xl flex-1 min-w-[200px]">
+                            <h3 class="font-bold text-slate-800 mb-2">權值雙箭頭表態</h3>
+                            <div class="flex gap-2 mb-2">
+                                <a href="https://tw.stock.yahoo.com/quote/2330.TW" target="_blank" class="stock-pill">2330 台積電</a>
+                                <a href="https://tw.stock.yahoo.com/quote/2454.TW" target="_blank" class="stock-pill">2454 聯發科</a>
+                            </div>
+                            <p class="text-xs text-slate-500">台積電盤中飆上新天價；聯發科大 <span class="up">漲 6%</span>，強勢回補缺口並站回季線，長線價值浮現。</p>
+                        </div>
+                        <div class="p-4 bg-white border border-slate-200 rounded-xl flex-1 min-w-[200px]">
+                            <h3 class="font-bold text-slate-800 mb-2">中小型飆股代表</h3>
+                            <div class="flex gap-2 mb-2">
+                                <a href="https://tw.stock.yahoo.com/quote/1714.TW" target="_blank" class="stock-pill">1714 光洋科</a>
+                                <a href="https://tw.stock.yahoo.com/quote/6236.TW" target="_blank" class="stock-pill">6236 矽格</a>
+                            </div>
+                            <p class="text-xs text-slate-500">光洋科連續一字 <span class="up">鎖死</span> 噴出，乖離率破 20%，建議嚴守 5 日均線停利；矽格走勢溫吞但持續創高。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover-card">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-emerald-100 p-3 rounded-2xl text-emerald-600"><i class="fas fa-camera fa-lg"></i></div>
+                        <h2 class="text-2xl font-bold">光學族群：大立光強勢回歸 帶動補漲</h2>
+                    </div>
+                    <p class="mb-4 text-slate-600">股王回神！大立光週四法說，股價率先亮燈 <span class="up">漲停</span>，帶動整體光學族群落後補漲：</p>
+                    
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="border-2 border-emerald-100 rounded-2xl p-5 bg-emerald-50">
+                            <h3 class="font-bold text-slate-800 mb-3 flex justify-between items-center">
+                                <span><i class="fas fa-crown text-amber-500 mr-1"></i> 前股王大復活</span>
+                                <a href="https://tw.stock.yahoo.com/quote/3008.TW" target="_blank" class="stock-pill bg-white">3008 大立光</a>
+                            </h3>
+                            <ul class="text-sm text-slate-700 space-y-2 list-disc list-inside">
+                                <li>外資目標價大舉上調至 <strong>3,423 ~ 3,640 元</strong>。</li>
+                                <li>Q3 新機預計搭載「可變光圈鏡頭」，有望成為高階旗艦機標準配備。</li>
+                                <li>技術面突破下降壓力線，長線空翻多。</li>
+                            </ul>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="border border-slate-200 rounded-xl p-3 bg-white hover:bg-slate-50 transition">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-bold text-sm text-slate-700">頭肩底突破</span>
+                                    <a href="https://tw.stock.yahoo.com/quote/3406.TW" target="_blank" class="stock-pill text-xs">3406 玉晶光</a>
+                                </div>
+                                <p class="text-xs text-slate-500">今年 EPS 挑戰 34-38 元，本益比不到 20 倍，外資啟動回補。</p>
+                            </div>
+                            <div class="border border-slate-200 rounded-xl p-3 bg-white hover:bg-slate-50 transition">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-bold text-sm text-slate-700">AI PC 升級受惠</span>
+                                    <a href="https://tw.stock.yahoo.com/quote/3362.TW" target="_blank" class="stock-pill text-xs">3362 先進光</a>
+                                </div>
+                                <p class="text-xs text-slate-500">NB鏡頭市占 >70%，人臉與手勢辨識推升毛利。</p>
+                            </div>
+                            <div class="border border-slate-200 rounded-xl p-3 bg-white hover:bg-slate-50 transition">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-bold text-sm text-slate-700">轉機黑馬</span>
+                                    <a href="https://tw.stock.yahoo.com/quote/4976.TW" target="_blank" class="stock-pill text-xs">4976 佳凌</a>
+                                </div>
+                                <p class="text-xs text-slate-500">切入 Level 4/5 級自駕車與無人機，營收已開始實質貢獻。</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="relative bg-white rounded-3xl p-1 overflow-hidden shadow-sm hover-card border border-rose-100">
+                    <div class="absolute inset-0 bg-gradient-to-r from-rose-50 to-pink-50 opacity-50"></div>
+                    <div class="relative flex flex-col sm:flex-row items-center justify-between p-6 gap-6">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-2">
+                                <i class="fas fa-heart text-rose-400"></i>
+                                <span class="text-rose-600 font-bold text-sm tracking-widest">STEYA 質感選物</span>
+                            </div>
+                            <h3 class="font-black text-xl text-slate-800 mb-2">掌握波段行情，更需身心穩定 ✨</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                大盤屢創新高，震盪加劇，看盤的壓力需要最溫柔的釋放。<br>
+                                換上 <strong class="text-rose-500">100% MIT 台灣製造的 Steya 運動內衣</strong>，給予您無壓迫的絕佳包覆與穩定支撐。讓您在專注決策的每一刻，都能從容不迫，優雅自若。
+                            </p>
+                        </div>
+                        <a href="https://www.steya.com.tw?utm_source=stock&utm_medium=social&utm_campaign=stock" target="_blank" class="shrink-0 bg-rose-500 text-white font-bold py-3 px-8 rounded-full hover:bg-rose-600 transition duration-300 shadow-lg shadow-rose-200 transform hover:-translate-y-1">
+                            享受無壓體驗 <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <section class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover-card">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="bg-amber-100 p-3 rounded-2xl text-amber-600"><i class="fas fa-microchip fa-lg"></i></div>
+                        <h2 class="text-2xl font-bold">被動元件與石英：AI 硬體的隱形心臟</h2>
+                    </div>
+                    <p class="mb-5 text-slate-600">AI 伺服器不僅吃算力，更吃元件規格！被動元件迎來「數量+規格」雙重爆發，交期拉長至 16-20 週。</p>
+                    
+                    <div class="mb-6">
+                        <h3 class="font-bold text-slate-800 mb-3 border-l-4 border-amber-500 pl-2">被動元件 (電容、電阻、電感)</h3>
+                        
+                        <div class="bg-white border border-slate-100 rounded-2xl p-4 shadow-sm relative h-56 mb-4">
+                            <canvas id="mlccChart"></canvas>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div class="p-4 bg-slate-50 border border-slate-100 rounded-xl">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-bold text-slate-800">龍頭定價權</span>
+                                    <a href="https://tw.stock.yahoo.com/quote/2327.TW" target="_blank" class="stock-pill">2327 國巨</a>
+                                </div>
+                                <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside">
+                                    <li>BB Ratio > 1，稼動率達 80-85%。</li>
+                                    <li>毛利率挑戰 37.5%~40% 歷史巔峰。</li>
+                                    <li>鉭質電容連三波調漲 (累計 15-30%)。</li>
+                                </ul>
+                            </div>
+                            <div class="p-4 bg-slate-50 border border-slate-100 rounded-xl">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-bold text-slate-800">三率三升轉機</span>
+                                    <a href="https://tw.stock.yahoo.com/quote/8042.TW" target="_blank" class="stock-pill">8042 金山電</a>
+                                </div>
+                                <ul class="text-xs text-slate-600 space-y-1 list-disc list-inside">
+                                    <li>AI 伺服器佔比突破 22% (超越家電)。</li>
+                                    <li>高壓鋁電解電容導入 AI 電源 PSU。</li>
+                                    <li>外資連買5天，大戶籌碼增加。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold text-slate-800 mb-3 border-l-4 border-blue-500 pl-2">石英元件：AI 算力的「節拍器」</h3>
+                        <p class="text-sm text-slate-600 mb-3">就像交響樂團需要指揮家打節拍，800G/1.6T 光通訊與 WiFi 7 速度越快，越需要高精準度的石英震盪器來同步訊號。</p>
+                        <div class="flex gap-4 flex-col sm:flex-row">
+                            <div class="flex-1 p-3 bg-blue-50 border border-blue-100 rounded-xl">
+                                <a href="https://tw.stock.yahoo.com/quote/3042.TW" target="_blank" class="stock-pill mb-2">3042 晶技</a>
+                                <p class="text-xs text-slate-600">產業老大哥，股價已率先發動大漲，反映高階產能需求。</p>
+                            </div>
+                            <div class="flex-1 p-3 bg-blue-50 border border-blue-100 rounded-xl">
+                                <a href="https://tw.stock.yahoo.com/quote/3221.TW" target="_blank" class="stock-pill mb-2">3221 台嘉碩</a>
+                                <p class="text-xs text-slate-600">位階相對委屈。400G/800G 差動震盪器與高頻濾波器產能於 H1 正式放量，營收具爆發力。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+
+            <div class="space-y-6">
+                
+                <div class="bg-slate-800 text-white p-6 rounded-3xl shadow-lg relative overflow-hidden">
+                    <div class="absolute -right-4 -top-4 text-slate-700 opacity-40"><i class="fas fa-robot text-8xl"></i></div>
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold mb-3 text-teal-400"><i class="fas fa-cogs mr-2"></i> 機器人/工具機 甦醒</h3>
+                        <p class="text-slate-300 leading-relaxed text-sm mb-4">
+                            資金充沛下，尋找「低位階、具族群性、剛出量」的標的。沉寂已久的機器人族群因沾上 CPO 題材與三月營收回溫，全面發動：
+                        </p>
+                        
+                        <div class="space-y-3">
+                            <div class="bg-slate-700/60 p-3 rounded-xl border border-slate-600"><div class="flex justify-between items-center mb-1">
+                                    <span class="font-bold text-teal-300 text-sm">突破三角收斂</span>
+                                    <a href="https://tw.stock.yahoo.com/quote/2049.TW" target="_blank" class="stock-pill text-xs bg-slate-800 text-teal-300 border-teal-800">2049 上銀</a>
+                                </div>
+                                <p class="text-xs text-slate-400">龍頭表態，母子公司 (大銀微系統) 聯袂出擊，帶動整體族群比價效應 [cite: 47, 48]。</p>
+                            </div>
+
+                            <div class="bg-slate-700/60 p-3 rounded-xl border border-slate-600">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-bold text-teal-300 text-sm">營收創46個月新高</span>
+                                    <a href="https://tw.stock.yahoo.com/quote/4540.TW" target="_blank" class="stock-pill text-xs bg-slate-800 text-teal-300 border-teal-800">4540 全球傳動</a>
+                                </div>
+                                <p class="text-xs text-slate-400">通吃中美系客戶，剛突破下降趨勢線，逢拉回量縮可留意 [cite: 49, 50]。</p>
+                            </div>
+
+                            <div class="bg-slate-700/60 p-3 rounded-xl border border-slate-600">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-bold text-teal-300 text-sm">站回所有均線</span>
+                                    <a href="https://tw.stock.yahoo.com/quote/2464.TW" target="_blank" class="stock-pill text-xs bg-slate-800 text-teal-300 border-teal-800">2464 盟立</a>
+                                </div>
+                                <p class="text-xs text-slate-400">具備機器人與 CoWoS 雙重題材，量能放大，位階極低 [cite: 52, 53]。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover-card">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-bold"><i class="fas fa-shopping-cart text-indigo-500 mr-2"></i> 強勢股壓回買點</h3>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-4">前期主流股若開高走低，只要籌碼未鬆動 (內外資未同賣)、未爆量長黑，皆是布局良機 [cite: 144, 146]：</p>
+                    
+                    <div class="space-y-3">
+                        <div class="p-3 bg-indigo-50 rounded-xl border border-indigo-100">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-slate-700 text-sm">熱製程設備</span>
+                                <a href="https://tw.stock.yahoo.com/quote/2467.TW" target="_blank" class="stock-pill text-xs">2467 志聖</a>
+                            </div>
+                            <p class="text-xs text-slate-600">Q1營收年增 72%。創高拉回屬正乖離修正，投信前期大買，籌碼安定 [cite: 147, 148]。</p>
+                        </div>
+
+                        <div class="p-3 bg-indigo-50 rounded-xl border border-indigo-100">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-slate-700 text-sm">PCB 鑽針耗材</span>
+                                <a href="https://tw.stock.yahoo.com/quote/8021.TW" target="_blank" class="stock-pill text-xs">8021 尖點</a>
+                            </div>
+                            <p class="text-xs text-slate-600">受惠高硬度板材增加鑽頭數倍消耗量。拉回仍收漲，外資投信未大幅調節 [cite: 151, 152]。</p>
+                        </div>
+
+                        <div class="p-3 bg-indigo-50 rounded-xl border border-indigo-100">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-slate-700 text-sm">伺服器 PCB/載板</span>
+                                <a href="https://tw.stock.yahoo.com/quote/4958.TW" target="_blank" class="stock-pill text-xs">4958 臻鼎-KY</a>
+                            </div>
+                            <p class="text-xs text-slate-600">Q1 載板業務大幅成長 70%。觀察月線/季線附近止跌力道 [cite: 153, 154]。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover-card">
+                     <h3 class="text-lg font-bold mb-2 text-slate-800"><i class="fas fa-chart-bar text-blue-500 mr-2"></i> 台股加權指數 Ｗ底型態</h3>
+                     <p class="text-xs text-slate-500 mb-4">突破 33,500 點頸線後一路軋空，長線多頭格局確立 [cite: 26, 27]。</p>
+                     <div class="relative h-48 w-full">
+                         <canvas id="marketTrendChart"></canvas>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 text-slate-400 text-sm mt-8 border-t border-slate-200">
+        <p class="mb-2"><i class="fas fa-book-open"></i> 陪讀筆記 | 財經知識轉譯</p>
+        <p class="text-xs">網頁內容由 AI 擷取自財經節目逐字稿，僅供教學參考。投資有風險，入市須謹慎。</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Chart.defaults.font.family = "'Noto Sans TC', sans-serif";
+            Chart.defaults.color = '#64748b'; 
+
+            // AI Server MLCC Demand Chart (Logarithmic)
+            const mlccEl = document.getElementById('mlccChart');
+            if (mlccEl) {
+                new Chart(mlccEl.getContext('2d'), {
+                    type: 'bar',
+                    data: {
+                        labels: ['一般伺服器', 'AI (H100)', 'AI (Rubin Ultra)'],
+                        datasets: [{
+                            label: 'MLCC 需求量 (顆)',
+                            data: [2000, 48000, 4300000], 
+                            backgroundColor: [
+                                'rgba(148, 163, 184, 0.6)', 
+                                'rgba(245, 158, 11, 0.8)',  
+                                'rgba(239, 68, 68, 0.9)'    
+                            ],
+                            borderRadius: 6,
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { 
+                            legend: { display: false },
+                            title: { 
+                                display: true, 
+                                text: 'AI 伺服器引爆 MLCC 數量革命 (對數座標)', 
+                                font: {size: 14, weight: 'bold'},
+                                color: '#1e293b'
+                            }
+                        },
+                        scales: {
+                            y: { 
+                                type: 'logarithmic', 
+                                grid: { color: '#f1f5f9', drawBorder: false },
+                                ticks: {
+                                    callback: function(value) {
+                                        if (value >= 10000) return (value/10000) + '萬';
+                                        return value;
+                                    }
+                                }
+                            },
+                            x: { grid: { display: false, drawBorder: false } }
+                        }
+                    }
+                });
+            }
+
+            // Market Trend Chart (Conceptual W-Bottom)
+            const trendEl = document.getElementById('marketTrendChart');
+            if (trendEl) {
+                new Chart(trendEl.getContext('2d'), {
+                    type: 'line',
+                    data: {
+                        labels: ['31700低點', '反彈頸線', '第二隻腳', '頸線突破', '今日36341'],
+                        datasets: [{
+                            label: '加權指數趨勢',
+                            data: [31700, 33500, 32000, 33800, 36341],
+                            borderColor: '#3b82f6', 
+                            backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                            borderWidth: 3,
+                            pointBackgroundColor: ['#94a3b8', '#94a3b8', '#10b981', '#f59e0b', '#ef4444'],
+                            pointRadius: [4, 4, 6, 6, 8],
+                            fill: true,
+                            tension: 0.3
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { display: false } },
+                        scales: {
+                            y: { 
+                                min: 30000,
+                                grid: { color: '#f1f5f9', drawBorder: false }
+                            },
+                            x: { grid: { display: false, drawBorder: false } }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
