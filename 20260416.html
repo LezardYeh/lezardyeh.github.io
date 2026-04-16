@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026-04-16 台積法說解析與Q1財報黑馬</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f8fafc;
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        /* 台股慣例：紅漲綠跌 */
+        .up { color: #ef4444; font-weight: 700; }
+        .down { color: #22c55e; font-weight: 700; }
+        
+        /* 活潑的股票膠囊按鈕 */
+        .stock-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background-color: #eff6ff;
+            color: #2563eb;
+            border: 1px solid #bfdbfe;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .stock-pill:hover {
+            background-color: #3b82f6;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(59,130,246,0.3);
+        }
+
+        /* 卡片懸浮效果 */
+        .hover-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hover-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 漸層文字 */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="text-slate-800 leading-relaxed selection:bg-rose-200">
+
+    <main class="container mx-auto px-4 py-8 max-w-6xl">
+        
+        <!-- 標題區塊 -->
+        <div class="mb-10 text-center">
+            <h1 class="text-4xl md:text-5xl font-black mb-4 leading-tight text-slate-800 tracking-tight">
+                台股再創 37,135 點新高！ <br class="md:hidden">
+                <span class="bg-gradient-to-r from-rose-500 to-orange-500 text-gradient">神山超車與 Q1 財報黑馬 🐎</span>
+            </h1>
+            <p class="text-slate-500 text-lg font-medium">台積電法說會超預期、被動元件漲價潮、價值委屈股全面解析</p>
+            <div class="mt-4 inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-200 text-sm font-bold text-slate-600">
+                <i class="far fa-calendar-alt text-rose-500"></i> 2026.04.16
+                <span class="w-1 h-1 bg-slate-300 rounded-full mx-1"></span>
+                <i class="fas fa-fire text-orange-500"></i> 季報發布期
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+            <!-- 左側主欄位 (佔 2 欄) -->
+            <div class="lg:col-span-2 space-y-6">
+                
+                <!-- 台積電法說會解析 -->
+                <section class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 hover-card">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-red-100 p-3 rounded-2xl text-red-600"><i class="fas fa-microchip fa-lg"></i></div>
+                        <h2 class="text-2xl font-bold">台積電法說：高標之上的資優生</h2>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                            <h3 class="font-bold text-slate-700 mb-2"><i class="fas fa-check-circle text-green-500 mr-1"></i> Q1 財報亮眼</h3>
+                            <p class="text-sm text-slate-600">
+                                外資原先給予極高標準（EPS 21元），結果開出 <strong class="up">22元</strong>，毛利率更站穩 65~66% 的高點。在赴美擴廠的折舊壓力下，毛利率不減反增，展現強大護城河。
+                            </p>
+                        </div>
+                        <div class="bg-red-50 p-5 rounded-2xl border border-red-100">
+                            <h3 class="font-bold text-red-700 mb-2"><i class="fas fa-chess-knight text-red-500 mr-1"></i> 設備股操作戰略</h3>
+                            <p class="text-sm text-slate-600">
+                                歷史經驗顯示，法說會後1~2週可能進入震盪。策略上：<strong class="text-red-600">「先賺台積電價差，再轉進設備股」</strong>。當台積電上攻後，設備股必然跟上。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-2 flex-wrap mt-2">
+                        <a href="https://tw.stock.yahoo.com/quote/2330.TW" target="_blank" class="stock-pill">2330 台積電</a>
+                        <span class="text-sm text-slate-500 self-center">外資若賣超反而是長線絕佳買點！</span>
+                    </div>
+                </section>
+
+                <!-- 籌碼大追擊：被動元件與光學 -->
+                <section class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 hover-card">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-blue-100 p-3 rounded-2xl text-blue-600"><i class="fas fa-search-dollar fa-lg"></i></div>
+                        <h2 class="text-2xl font-bold">籌碼異動：被動元件與 CPO 光學</h2>
+                    </div>
+                    <p class="mb-5 text-slate-600">籌碼面出現顯著變化，「漲與缺」成為盤面主旋律，大戶資金正悄悄佈局：</p>
+                    
+                    <div class="space-y-4">
+                        <!-- 被動元件 -->
+                        <div class="border-2 border-slate-50 rounded-2xl p-5 bg-white shadow-sm">
+                            <h3 class="font-bold text-slate-800 mb-3 flex items-center">
+                                <i class="fas fa-plug text-blue-500 mr-2"></i> 被動元件 MLCC 漲價潮
+                            </h3>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <a href="https://tw.stock.yahoo.com/quote/2327.TW" target="_blank" class="stock-pill">2327 國巨</a>
+                                <a href="https://tw.stock.yahoo.com/quote/2492.TW" target="_blank" class="stock-pill">2492 華新科</a>
+                                <a href="https://tw.stock.yahoo.com/quote/6173.TW" target="_blank" class="stock-pill">6173 信昌電</a>
+                                <a href="https://tw.stock.yahoo.com/quote/8043.TW" target="_blank" class="stock-pill">8043 蜜望實</a>
+                            </div>
+                            <p class="text-sm text-slate-600">
+                                國巨 Q1 EPS 達 3.9 元，雙率雙<span class="up">升</span>。整體族群型態已由底部翻揚（布林通道打開），內外資同步買超，這波漲價動能「係金A」。
+                            </p>
+                        </div>
+                        
+                        <!-- 光學與大戶 -->
+                        <div class="border-2 border-slate-50 rounded-2xl p-5 bg-white shadow-sm">
+                            <h3 class="font-bold text-slate-800 mb-3 flex items-center">
+                                <i class="fas fa-camera text-blue-500 mr-2"></i> 光學股跨入 CPO 矽光子
+                            </h3>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <a href="https://tw.stock.yahoo.com/quote/3008.TW" target="_blank" class="stock-pill">3008 大立光</a>
+                                <a href="https://tw.stock.yahoo.com/quote/6668.TW" target="_blank" class="stock-pill">6668 中揚光</a>
+                            </div>
+                            <p class="text-sm text-slate-600">
+                                大立光法說會證實已跨入 CPO 領域，Q1 毛利率逼近 50%。雖然投信未捧場，但知名權證大戶分點「三多哥」已連三日大舉掃貨（砸下8億元）。
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 優雅工商時間 -->
+                <div class="relative bg-white rounded-3xl p-1 overflow-hidden shadow-sm hover-card border border-rose-100">
+                    <div class="absolute inset-0 bg-gradient-to-r from-rose-50 to-orange-50 opacity-50"></div>
+                    <div class="relative flex flex-col sm:flex-row items-center justify-between p-6 md:p-8 gap-6">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-2">
+                                <i class="fas fa-heart text-rose-400"></i>
+                                <span class="text-rose-600 font-bold text-sm tracking-widest">STEYA 質感生活提案</span>
+                            </div>
+                            <h3 class="font-black text-2xl text-slate-800 mb-2">專注選股，身體更需要溫柔包覆</h3>
+                            <p class="text-slate-600 leading-relaxed text-sm">
+                                緊盯財報季的各種數據，身心難免因為市場波動而緊繃。<br>
+                                換上 <strong class="text-rose-500">100% MIT 台灣製造的 Steya 運動內衣</strong>，為您提供無壓的親膚支撐。讓極致的舒適感陪伴您的每一次決策，投資與生活，都能保持從容優雅的狀態。
+                            </p>
+                        </div>
+                        <a href="https://www.steya.com.tw?utm_source=stock&utm_medium=social&utm_campaign=stock" target="_blank" class="shrink-0 bg-rose-500 text-white font-bold py-3 px-8 rounded-full hover:bg-rose-600 transition duration-300 shadow-lg shadow-rose-200 transform hover:-translate-y-1">
+                            探索無壓體驗 <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Q1 財報黑馬：價值委屈股 -->
+                <section class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 hover-card">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-emerald-100 p-3 rounded-2xl text-emerald-600"><i class="fas fa-gem fa-lg"></i></div>
+                        <h2 class="text-2xl font-bold">尋找 Q1 財報黑馬：別人不好他獨好</h2>
+                    </div>
+                    <p class="mb-6 text-slate-600">與其追逐已經大漲 50% 的熱門股，不如從營收創高、基期較低的「委屈股」中挖寶：</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex flex-col md:flex-row gap-4 items-start bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                            <div class="text-3xl pt-1">📱</div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-lg mb-2">同業衰退，他獨自成長 (驅動 IC)</h3>
+                                <a href="https://tw.stock.yahoo.com/quote/8016.TW" target="_blank" class="stock-pill mb-2">8016 矽創</a>
+                                <p class="text-sm text-slate-600">
+                                    當驅動 IC 龍頭們（如聯詠衰退14.6%）營收下滑時，矽創 Q1 營收逆勢成長 <strong class="up">23%</strong>！獨家零電容觸控驅動 IC 帶來差異化，目前本益比不到 15 倍。
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row gap-4 items-start bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                            <div class="text-3xl pt-1">🔌</div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-lg mb-2">業績強棍，股價委屈 (PCB 族群)</h3>
+                                <a href="https://tw.stock.yahoo.com/quote/5469.TW" target="_blank" class="stock-pill mb-2">5469 漢宇博</a>
+                                <p class="text-sm text-slate-600">
+                                    Q1 營收年增率高達 <strong class="up">48.5%</strong>，成長率遠勝於當紅的華通（16.8%）。但股價卻呈現貼地飛行，伺服器佔比達20%，本益比在族群中相對偏低。
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row gap-4 items-start bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                            <div class="text-3xl pt-1">🛒</div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-lg mb-2">沉寂已久，一鳴驚人 (食品與塑化)</h3>
+                                <div class="flex gap-2 mb-2">
+                                    <a href="https://tw.stock.yahoo.com/quote/1227.TW" target="_blank" class="stock-pill">1227 佳格</a>
+                                    <a href="https://tw.stock.yahoo.com/quote/1312.TW" target="_blank" class="stock-pill">1312 國喬</a>
+                                </div>
+                                <p class="text-sm text-slate-600">
+                                    佳格 Q1 價格成長 12.9%（食品股雙位數成長極罕見）；國喬受惠 SM 報價強彈 20%，具備低價轉機題材。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- 右側側邊欄 -->
+            <div class="space-y-6">
+                
+                <!-- 台積電估值圖表 -->
+                <div class="bg-slate-800 text-white p-6 rounded-3xl shadow-lg relative overflow-hidden">
+                    <div class="absolute -right-4 -top-4 text-slate-700 opacity-40"><i class="fas fa-chart-line text-8xl"></i></div>
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold mb-4 text-amber-400"><i class="fas fa-calculator mr-2"></i> 台積電 2085 元貴嗎？</h3>
+                        <p class="text-sm text-slate-300 mb-4">法人的評估標準（預期性本益比），眼光已經放到未來兩年：</p>
+                        
+                        <div class="space-y-3">
+                            <div class="bg-slate-700/50 p-3 rounded-xl border border-slate-600 flex justify-between items-center">
+                                <div>
+                                    <div class="text-xs text-slate-400">2024 (預估EPS 93)</div>
+                                    <div class="font-bold">本益比 22.4 倍</div>
+                                </div>
+                                <span class="text-green-400"><i class="fas fa-check"></i> 合理</span>
+                            </div>
+                            <div class="bg-slate-700/50 p-3 rounded-xl border border-slate-600 flex justify-between items-center">
+                                <div>
+                                    <div class="text-xs text-slate-400">2025 (預估EPS 125)</div>
+                                    <div class="font-bold">本益比 ~16.6 倍</div>
+                                </div>
+                                <span class="text-yellow-400"><i class="fas fa-star"></i> 便宜</span>
+                            </div>
+                            <div class="bg-slate-700/50 p-3 rounded-xl border border-slate-600 flex justify-between items-center">
+                                <div>
+                                    <div class="text-xs text-slate-400">2026 (預估EPS 155)</div>
+                                    <div class="font-bold">本益比 13.4 倍</div>
+                                </div>
+                                <span class="text-rose-400"><i class="fas fa-fire"></i> 極低估</span>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-4 border-t border-slate-600 pt-3">
+                            對比美股科技巨頭（亞馬遜 35倍、蘋果 34倍），台積電目前的估值在國際熱錢眼中依然是物美價廉。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 金融股防禦 -->
+                <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover-card">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-bold"><i class="fas fa-university text-orange-500 mr-2"></i> 金融股防禦價值浮現</h3>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-4">IFRS 17 新制上路，市場擔憂的衝擊已反映完畢（利空出盡）：</p>
+                    
+                    <div class="space-y-3 mb-4">
+                        <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="flex justify-between items-center mb-1">
+                                <a href="https://tw.stock.yahoo.com/quote/2891.TW" target="_blank" class="stock-pill text-xs">2891 中信金</a>
+                            </div>
+                            <p class="text-xs text-slate-600">旗下台壽保表現優異，整體獲利呈現<span class="up">成長</span>，股價具備防禦屬性。</p>
+                        </div>
+                        
+                        <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="flex justify-between items-center mb-1">
+                                <a href="https://tw.stock.yahoo.com/quote/2882.TW" target="_blank" class="stock-pill text-xs">2882 國泰金</a>
+                                <a href="https://tw.stock.yahoo.com/quote/2881.TW" target="_blank" class="stock-pill text-xs">2881 富邦金</a>
+                            </div>
+                            <p class="text-xs text-slate-600">壽險主體的衰退幅度極小（如國泰金僅衰退 1.4%），大石頭落地，適合大盤高檔時的穩健配置。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 驅動 IC 營收圖表 -->
+                <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover-card">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-bold"><i class="fas fa-chart-bar text-indigo-500 mr-2"></i> 驅動 IC Q1 營收年增率</h3>
+                    </div>
+                    <div class="h-48 w-full relative">
+                        <canvas id="icChart"></canvas>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="bg-slate-100 mt-12 py-8 border-t border-slate-200">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-slate-500 font-bold mb-2"><i class="fas fa-book-open text-rose-400 mr-1"></i> 財經精選陪讀筆記</p>
+            <p class="text-xs text-slate-400">網頁內容擷取自財經節目資訊，僅供教學與交流參考，不構成任何具體投資建議。投資理財有賺有賠，請自行評估風險。</p>
+        </div>
+    </footer>
+
+    <!-- Chart.js 圖表設定 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Chart.defaults.font.family = "'Noto Sans TC', sans-serif";
+            Chart.defaults.color = '#64748b'; 
+
+            const ctxIC = document.getElementById('icChart').getContext('2d');
+            new Chart(ctxIC, {
+                type: 'bar',
+                data: {
+                    labels: ['矽創 (8016)', '聯詠 (3034)'],
+                    datasets: [{
+                        label: 'Q1 營收年增率 (%)',
+                        data: [23, -14.6],
+                        backgroundColor: [
+                            'rgba(239, 68, 68, 0.8)',   // Red for positive
+                            'rgba(34, 197, 94, 0.8)'    // Green for negative (Taiwan style)
+                        ],
+                        borderRadius: 6,
+                        barPercentage: 0.5
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { 
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.parsed.y + ' %';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: { 
+                            grid: { color: '#f1f5f9', drawBorder: false },
+                        },
+                        x: { 
+                            grid: { display: false, drawBorder: false },
+                            ticks: { font: { weight: 'bold' } }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
