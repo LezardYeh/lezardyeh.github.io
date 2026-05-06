@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026-05-06 陪讀筆記 | 台股拚五萬！記憶體復活與散熱錯殺解析</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f0fdfa; /* 清新的 Teal 色調背景 */
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        /* 台股慣例：紅漲綠跌 */
+        .up { color: #ef4444; font-weight: 700; }
+        .down { color: #22c55e; font-weight: 700; }
+        
+        /* 活潑的股票膠囊按鈕 */
+        .stock-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background-color: #eff6ff;
+            color: #2563eb;
+            border: 1px solid #bfdbfe;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .stock-pill:hover {
+            background-color: #3b82f6;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(59,130,246,0.3);
+        }
+
+        /* 卡片懸浮效果 */
+        .hover-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hover-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 漸層文字 */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="text-slate-800 leading-relaxed selection:bg-teal-200">
+
+    <main class="container mx-auto px-4 py-8 max-w-6xl">
+        
+        <!-- 標題區塊 -->
+        <div class="mb-10 text-center">
+            <div class="inline-block bg-teal-100 text-teal-800 px-4 py-1 rounded-full text-sm font-bold mb-4">
+                <i class="far fa-calendar-alt mr-1"></i> 2026.05.06 盤勢解析
+            </div>
+            <h1 class="text-4xl md:text-5xl font-black mb-4 leading-tight text-slate-800 tracking-tight">
+                台股爆量大怒神 <br class="md:hidden">
+                <span class="bg-gradient-to-r from-teal-500 to-blue-600 text-gradient">五月拚五萬？🎯</span>
+            </h1>
+            <p class="text-slate-500 text-lg font-medium">撿CPO、載板、低價IC，記憶體大復活與散熱錯殺全解析</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+            <!-- 左側主欄位 (佔 2 欄) -->
+            <div class="lg:col-span-2 space-y-6">
+                
+                <!-- 大盤與操作策略 -->
+                <section class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 hover-card">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-blue-100 p-3 rounded-2xl text-blue-600"><i class="fas fa-chart-line fa-lg"></i></div>
+                        <h2 class="text-2xl font-bold">大盤快照：4萬成地板，年底看5萬</h2>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4 mb-4">
+                        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                            <h3 class="font-bold text-slate-700 mb-2"><i class="fas fa-shield-alt text-slate-400 mr-1"></i> 盤勢定調</h3>
+                            <p class="text-sm text-slate-600">
+                                爆出1.5兆歷史次大天量，盤中震盪劇烈如「大怒神」。但技術面連續三天站穩四萬點，若持續拉升，<strong class="text-blue-600">四萬點將成未來鐵板支撐</strong>，長線目標上看五萬點。
+                            </p>
+                        </div>
+                        <div class="bg-red-50 p-5 rounded-2xl border border-red-100">
+                            <h3 class="font-bold text-red-700 mb-2"><i class="fas fa-fire text-red-500 mr-1"></i> K線之神策略</h3>
+                            <p class="text-sm text-slate-600">
+                                多頭格局不變，但高檔爆量需保戒心。核心心法：<strong class="up">「回後買上漲」</strong>。資金控管至8成，嚴設停損停利，避免在高檔爆量時盲目追高。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="font-bold text-slate-800 mt-6 mb-3">📌 權值股與IC設計體檢</h3>
+                    <div class="flex flex-wrap gap-2 mb-3">
+                        <a href="https://tw.stock.yahoo.com/quote/2330.TW" target="_blank" class="stock-pill">2330 台積電</a>
+                        <a href="https://tw.stock.yahoo.com/quote/2317.TW" target="_blank" class="stock-pill">2317 鴻海</a>
+                        <a href="https://tw.stock.yahoo.com/quote/2382.TW" target="_blank" class="stock-pill">2382 廣達</a>
+                        <a href="https://tw.stock.yahoo.com/quote/2454.TW" target="_blank" class="stock-pill">2454 聯發科</a>
+                        <a href="https://tw.stock.yahoo.com/quote/2436.TW" target="_blank" class="stock-pill">2436 偉詮電</a>
+                    </div>
+                    <p class="text-sm text-slate-600">
+                        <strong class="text-slate-800">鴻海</strong>受惠最強四月營收，帶量挑戰 265 元前高；<strong class="text-slate-800">聯發科</strong>盤中雖觸漲停但爆量留上影線（變盤線），建議勿追高，等待拉回月線防守區；低價IC如<strong class="text-slate-800">偉詮電</strong>需等待紅K實體棒確立再介入。
+                    </p>
+                </section>
+
+                <!-- 優雅工商時間 -->
+                <div class="relative bg-white rounded-3xl p-1 overflow-hidden shadow-sm hover-card border border-rose-100">
+                    <div class="absolute inset-0 bg-gradient-to-r from-rose-50 to-orange-50 opacity-50"></div>
+                    <div class="relative flex flex-col sm:flex-row items-center justify-between p-6 md:p-8 gap-6">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-2">
+                                <i class="fas fa-heart text-rose-400"></i>
+                                <span class="text-rose-600 font-bold text-sm tracking-widest">STEYA 質感生活提案</span>
+                            </div>
+                            <h3 class="font-black text-2xl text-slate-800 mb-2">投資理財，也要理好身心 ✨</h3>
+                            <p class="text-slate-600 leading-relaxed text-sm">
+                                股市如大怒神般震盪，專注市場脈動之餘，別忘了溫柔對待自己。<br>
+                                換上 <strong class="text-rose-500">100% MIT 台灣製造的 Steya 運動內衣</strong>，為您提供無壓支撐。無論是深呼吸平復看盤心情，還是日常的伸展，都能讓您在生活與操盤中優雅發揮最佳狀態。
+                            </p>
+                        </div>
+                        <a href="https://www.steya.com.tw?utm_source=stock&utm_medium=social&utm_campaign=stock" target="_blank" class="shrink-0 bg-rose-500 text-white font-bold py-3 px-8 rounded-full hover:bg-rose-600 transition duration-300 shadow-lg shadow-rose-200 transform hover:-translate-y-1">
+                            探索舒適體驗 <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 記憶體超級循環 -->
+                <section class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 hover-card">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-indigo-100 p-3 rounded-2xl text-indigo-600"><i class="fas fa-memory fa-lg"></i></div>
+                        <h2 class="text-2xl font-bold">記憶體：不只是循環，是大行情啟動</h2>
+                    </div>
+                    <p class="mb-5 text-slate-600">美光、海力士等國際大廠股價創高，AI 訓練與邊緣端（手機/PC）需求將把產能吃光。專家直言：<strong class="up">「這不是景氣循環，而是超級長線行情！」</strong>去年只是初升段，主升段才剛要開始。</p>
+                    
+                    <div class="space-y-4">
+                        <!-- 群聯 -->
+                        <div class="flex flex-col md:flex-row gap-4 items-start bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                            <div class="flex-1">
+                                <div class="flex justify-between items-center mb-2">
+                                    <h3 class="font-bold text-lg text-slate-800">模組庫存之王</h3>
+                                    <a href="https://tw.stock.yahoo.com/quote/8299.TW" target="_blank" class="stock-pill">8299 群聯</a>
+                                </div>
+                                <p class="text-sm text-slate-600">
+                                    大戶籌碼已悄悄歸隊（600張與1000張大戶增加，散戶退場）。挾帶龐大低價庫存與漲價優勢，法人圈對其獲利預估不斷上修，技術面洗盤結束，準備挑戰前高。
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 南亞科 & 福懋科 -->
+                        <div class="flex flex-col md:flex-row gap-4 items-start bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                            <div class="flex-1">
+                                <div class="flex justify-between items-center mb-2">
+                                    <h3 class="font-bold text-lg text-slate-800">製造與封測連動</h3>
+                                    <div>
+                                        <a href="https://tw.stock.yahoo.com/quote/2408.TW" target="_blank" class="stock-pill">2408 南亞科</a>
+                                        <a href="https://tw.stock.yahoo.com/quote/8131.TW" target="_blank" class="stock-pill">8131 福懋科</a>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-slate-600">
+                                    <strong class="text-slate-800">南亞科</strong> 出現「春江水暖鴨先知」訊號，大股東大舉買進，技術面突破下降趨勢線且均線糾結轉多。<strong class="text-slate-800">福懋科</strong> 身為其專屬封測廠，籌碼乾淨，享有訂單外溢紅利。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- AMD 與 矽光子 -->
+                <section class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 hover-card">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-amber-100 p-3 rounded-2xl text-amber-600"><i class="fas fa-server fa-lg"></i></div>
+                        <h2 class="text-2xl font-bold">AMD 狂飆與 CPO 落後補漲</h2>
+                    </div>
+                    <p class="mb-4 text-slate-600">超微 (AMD) 財報驚艷，資料中心 CPU 營收大 <span class="up">增 70%</span>，AI 推論時代正式到來。台廠供應鏈通吃輝達與超微大單！</p>
+                    
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div class="border-2 border-slate-50 rounded-2xl p-5 bg-white shadow-sm">
+                            <h3 class="font-bold text-slate-800 mb-3"><i class="fas fa-microchip text-amber-500 mr-1"></i> AMD 概念低基期股</h3>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <a href="https://tw.stock.yahoo.com/quote/2486.TW" target="_blank" class="stock-pill">2486 一詮</a>
+                                <a href="https://tw.stock.yahoo.com/quote/3706.TW" target="_blank" class="stock-pill">3706 神達</a>
+                            </div>
+                            <ul class="text-sm text-slate-600 space-y-2">
+                                <li><strong class="text-slate-800">一詮：</strong>均熱片第二供應商，具外溢效應與 Google 認證，拉回十日線可留意防守。</li>
+                                <li><strong class="text-slate-800">神達：</strong>接手 Intel 資中心事業體，第一季營收佳，股價在年線附近具防禦力（81元下緣防守）。</li>
+                            </ul>
+                        </div>
+                        <div class="border-2 border-slate-50 rounded-2xl p-5 bg-white shadow-sm">
+                            <h3 class="font-bold text-slate-800 mb-3"><i class="fas fa-network-wired text-purple-500 mr-1"></i> 矽光子 (CPO) 假摔找買點</h3>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <a href="https://tw.stock.yahoo.com/quote/3450.TW" target="_blank" class="stock-pill">3450 聯鈞</a>
+                                <a href="https://tw.stock.yahoo.com/quote/6451.TW" target="_blank" class="stock-pill">6451 訊芯-KY</a>
+                            </div>
+                            <ul class="text-sm text-slate-600 space-y-2">
+                                <li>產業訂單已排到 2028 年。</li>
+                                <li><strong class="text-slate-800">聯鈞：</strong>落後補漲指標，回測 293 元有撐。</li>
+                                <li><strong class="text-slate-800">訊芯：</strong>創歷史高後遭急殺跌停，觀察 410 元缺口支撐，籌碼換手後仍有機會。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- 右側側邊欄 (佔 1 欄) -->
+            <div class="space-y-6">
+                
+                <!-- 散熱產業大解析 -->
+                <div class="bg-slate-800 text-white p-6 rounded-3xl shadow-lg relative overflow-hidden hover-card">
+                    <div class="absolute -right-4 -top-4 text-slate-700 opacity-40"><i class="fas fa-fan text-8xl"></i></div>
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold mb-4 text-sky-400"><i class="fas fa-temperature-low mr-2"></i> 散熱族群：真衰還是假摔？</h3>
+                        <p class="text-sm text-slate-300 mb-4 leading-relaxed">
+                            市場傳出 Rubin 架構變更，均熱片從 2 片改回 1 片，導致報價可能從 $150 掉回 $50，引發散熱族群大地震。專家教你分辨錯殺與真殺：
+                        </p>
+                        
+                        <div class="space-y-3">
+                            <div class="bg-slate-700/50 p-3 rounded-xl border border-slate-600">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-bold text-red-400">⚠️ 影響較大 (需觀望)</span>
+                                </div>
+                                <p class="text-xs text-slate-300">均熱片供應商（如建策），規格若未改回，短線將面臨修正，建議跌破月線先停看聽。</p>
+                            </div>
+                            
+                            <div class="bg-slate-700/50 p-3 rounded-xl border border-slate-600">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="font-bold text-green-400">✅ 錯殺免疫 (水冷/快接頭)</span>
+                                    <div class="flex gap-1">
+                                        <a href="https://tw.stock.yahoo.com/quote/3324.TW" target="_blank" class="text-xs bg-slate-600 px-2 py-1 rounded hover:bg-slate-500">3324 雙鴻</a>
+                                        <a href="https://tw.stock.yahoo.com/quote/6805.TW" target="_blank" class="text-xs bg-slate-600 px-2 py-1 rounded hover:bg-slate-500">6805 富士達</a>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-slate-300">水冷板與快接頭設計並未改變。奇鋐 (3017) 甚至強硬發重訊反駁掉單傳言，此類屬「假摔」錯殺，拉回反而是佈局良機。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 籌碼視覺化圖表 -->
+                <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover-card">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-bold"><i class="fas fa-chart-pie text-indigo-500 mr-2"></i> 記憶體大戶籌碼動向</h3>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-4">指標股（如群聯、南亞科）出現「黃金交叉」：散戶持股下降，千張大戶持股攀升，為起漲前兆。</p>
+                    
+                    <div class="h-48 w-full relative">
+                        <canvas id="chipChart"></canvas>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="bg-slate-100 mt-12 py-8 border-t border-slate-200">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-slate-500 font-bold mb-2"><i class="fas fa-book-open text-teal-500 mr-1"></i> 陪讀筆記 | 財經精華轉譯</p>
+            <p class="text-xs text-slate-400">本網頁內容擷取自電視節目逐字稿，資料已經過重新編排與適度校正。<br>內容僅供學習與資訊交流，不構成任何具體投資建議。投資理財有賺有賠，請自行評估風險。</p>
+        </div>
+    </footer>
+
+    <!-- Chart.js 圖表設定 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Chart.defaults.font.family = "'Noto Sans TC', sans-serif";
+            Chart.defaults.color = '#64748b'; 
+
+            // 籌碼黃金交叉示意圖
+            const ctxChip = document.getElementById('chipChart').getContext('2d');
+            new Chart(ctxChip, {
+                type: 'line',
+                data: {
+                    labels: ['W1', 'W2', 'W3', 'W4', 'W5', 'This Week'],
+                    datasets: [
+                        {
+                            label: '大戶持股比例 (向右上)',
+                            data: [45, 46, 46.5, 48, 51, 54],
+                            borderColor: '#3b82f6', // Blue
+                            backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                            borderWidth: 3,
+                            tension: 0.4,
+                            pointBackgroundColor: '#3b82f6'
+                        },
+                        {
+                            label: '散戶持股人數 (向右下)',
+                            data: [55, 54, 53.5, 52, 49, 46],
+                            borderColor: '#eab308', // Yellow
+                            borderDash: [5, 5],
+                            borderWidth: 2,
+                            tension: 0.4,
+                            pointBackgroundColor: '#eab308'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { 
+                        legend: { 
+                            position: 'bottom',
+                            labels: { boxWidth: 12, font: { size: 10 } }
+                        },
+                        tooltip: { mode: 'index', intersect: false }
+                    },
+                    scales: {
+                        y: { 
+                            display: false, // 隱藏 Y 軸數值，僅做趨勢示意
+                            grid: { display: false }
+                        },
+                        x: { 
+                            grid: { display: false, drawBorder: false }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
