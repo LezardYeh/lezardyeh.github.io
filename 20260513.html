@@ -1,0 +1,345 @@
+
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026-05-13 台股4萬2回檔是買點？內資大戶狂掃貨</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f8fafc;
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        /* 台股慣例：紅漲綠跌 */
+        .up { color: #ef4444; font-weight: 700; }
+        .down { color: #22c55e; font-weight: 700; }
+        
+        /* 活潑的股票膠囊按鈕 */
+        .stock-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background-color: #eff6ff;
+            color: #2563eb;
+            border: 1px solid #bfdbfe;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .stock-pill:hover {
+            background-color: #3b82f6;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(59,130,246,0.3);
+        }
+
+        /* 卡片懸浮效果 */
+        .hover-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hover-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 漸層文字 */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="text-slate-800 leading-relaxed selection:bg-indigo-200">
+
+    <main class="container mx-auto px-4 py-8 max-w-6xl">
+        
+        <!-- 標題區塊 -->
+        <div class="mb-10 text-center">
+            <div class="inline-block bg-indigo-100 text-indigo-800 px-4 py-1 rounded-full text-sm font-bold mb-4">
+                <i class="far fa-calendar-alt mr-1"></i> 2026.05.13 陪讀筆記
+            </div>
+            <h1 class="text-4xl md:text-5xl font-black mb-4 leading-tight text-slate-800 tracking-tight">
+                台股4萬2回檔是買點？ <br class="md:hidden">
+                <span class="bg-gradient-to-r from-red-500 to-orange-500 text-gradient">內資大戶狂掃貨名單 🚀</span>
+            </h1>
+            <p class="text-slate-500 text-lg font-medium">通膨利空測試、CPO籌碼健診與低軌衛星飆股基因大解密</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            
+            <!-- 左側主欄位 (佔 2 欄) -->
+            <div class="lg:col-span-2 space-y-6">
+                
+                <!-- 大盤與技術面解析 -->
+                <section class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 hover-card">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-red-100 p-3 rounded-2xl text-red-600"><i class="fas fa-chart-line fa-lg"></i></div>
+                        <h2 class="text-2xl font-bold">K線大師：回後買上漲 vs. 島型反轉</h2>
+                    </div>
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 mb-5">
+                        <p class="text-slate-700 font-medium">
+                            美國 CPI 上升至 3.8%，通膨陰影打壓美科技股，但台股大盤展現極強韌性！盤中雖跌破五日均線，但收盤仍留長下影線守住紅K低點，4萬點地板依然穩固。
+                        </p>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <!-- 回後買上漲 -->
+                        <div class="border-2 border-emerald-50 rounded-2xl p-5 bg-white shadow-sm">
+                            <h3 class="font-bold text-emerald-700 mb-3"><i class="fas fa-arrow-up text-emerald-500 mr-1"></i> 回後買上漲 (找買點)</h3>
+                            <div class="space-y-3">
+                                <div>
+                                    <div class="flex gap-2 mb-1">
+                                        <a href="https://tw.stock.yahoo.com/quote/2376.TW" target="_blank" class="stock-pill">2376 技嘉</a>
+                                        <a href="https://tw.stock.yahoo.com/quote/2377.TW" target="_blank" class="stock-pill">2377 微星</a>
+                                    </div>
+                                    <p class="text-xs text-slate-500">二線老AI打底完成，上漲有量下跌量縮，剛轉多頭。</p>
+                                </div>
+                                <div>
+                                    <div class="flex gap-2 mb-1">
+                                        <a href="https://tw.stock.yahoo.com/quote/2303.TW" target="_blank" class="stock-pill">2303 聯電</a>
+                                        <a href="https://tw.stock.yahoo.com/quote/2337.TW" target="_blank" class="stock-pill">2337 旺宏</a>
+                                    </div>
+                                    <p class="text-xs text-slate-500">聯電任何拉回皆是買點；旺宏強勢漲停突破箱型整理。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 避開島型反轉 -->
+                        <div class="border-2 border-rose-50 rounded-2xl p-5 bg-white shadow-sm">
+                            <h3 class="font-bold text-rose-700 mb-3"><i class="fas fa-exclamation-triangle text-rose-500 mr-1"></i> 警惕島型反轉 (反彈跑)</h3>
+                            <div class="space-y-3">
+                                <div>
+                                    <div class="flex gap-2 mb-1">
+                                        <a href="https://tw.stock.yahoo.com/quote/2301.TW" target="_blank" class="stock-pill">2301 光寶科</a>
+                                        <a href="https://tw.stock.yahoo.com/quote/3665.TW" target="_blank" class="stock-pill">3665 貿聯-KY</a>
+                                    </div>
+                                    <p class="text-xs text-slate-500">高檔爆大量收黑，形成「左缺右口」島型反轉。切勿貪平，反彈應果斷停利/停損出場！</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 優雅工商時間 -->
+                <div class="relative bg-white rounded-3xl p-1 overflow-hidden shadow-sm hover-card border border-teal-100">
+                    <div class="absolute inset-0 bg-gradient-to-r from-teal-50 to-blue-50 opacity-50"></div>
+                    <div class="relative flex flex-col sm:flex-row items-center justify-between p-6 md:p-8 gap-6">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-2">
+                                <i class="fas fa-leaf text-teal-500"></i>
+                                <span class="text-teal-600 font-bold text-sm tracking-widest">STEYA 質感生活提案</span>
+                            </div>
+                            <h3 class="font-black text-2xl text-slate-800 mb-2">投資需要紀律，身心需要呼吸</h3>
+                            <p class="text-slate-600 leading-relaxed text-sm">
+                                面對盤中千點的劇烈震盪，除了嚴守「停損不套牢」的紀律，您更需要舒適的陪伴。<br>
+                                換上 <strong class="text-teal-600">Steya 運動內衣（100% MIT 台灣製造）</strong>，體驗極致親膚與無壓支撐。無論是屏息看盤或是休閒伸展，都能讓您在波段中保持最優雅從容的狀態。
+                            </p>
+                        </div>
+                        <a href="https://www.steya.com.tw?utm_source=stock&utm_medium=social&utm_campaign=stock" target="_blank" class="shrink-0 bg-teal-500 text-white font-bold py-3 px-8 rounded-full hover:bg-teal-600 transition duration-300 shadow-lg shadow-teal-200 transform hover:-translate-y-1">
+                            探索無壓體驗 <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 產業趨勢：低軌與功率元件 -->
+                <section class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 hover-card">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="bg-indigo-100 p-3 rounded-2xl text-indigo-600"><i class="fas fa-satellite fa-lg"></i></div>
+                        <h2 class="text-2xl font-bold">產業趨勢：飆股基因與 Computex</h2>
+                    </div>
+                    <p class="mb-5 text-slate-600">無懼通膨壓力，瞄準六月 Computex 及 GTC 雙主場，以及即將 IPO 的 SpaceX 商機：</p>
+                    
+                    <div class="space-y-4">
+                        <!-- 低軌衛星 -->
+                        <div class="flex flex-col md:flex-row gap-4 items-start bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                            <div class="text-3xl pt-1">🚀</div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-lg mb-2">低軌衛星 (SpaceX 題材)</h3>
+                                <div class="flex flex-wrap gap-2 mb-2">
+                                    <a href="https://tw.stock.yahoo.com/quote/3491.TW" target="_blank" class="stock-pill">3491 昇達科</a>
+                                    <a href="https://tw.stock.yahoo.com/quote/2367.TW" target="_blank" class="stock-pill">2367 燿華</a>
+                                    <a href="https://tw.stock.yahoo.com/quote/2313.TW" target="_blank" class="stock-pill">2313 華通</a>
+                                </div>
+                                <p class="text-sm text-slate-600">
+                                    <strong class="text-indigo-600">昇達科</strong> 訂單能見度已達 2027 年，Q1 EPS 高達 1.73 元，呈現「溫水煮青蛙」式的黑馬長多格局；華通因當沖客多籌碼較亂，需等待沉澱。
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- 功率元件 -->
+                        <div class="flex flex-col md:flex-row gap-4 items-start bg-slate-50 p-5 rounded-2xl border border-slate-100">
+                            <div class="text-3xl pt-1">⚡</div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-lg mb-2">功率半導體 (漲價受惠)</h3>
+                                <div class="flex flex-wrap gap-2 mb-2">
+                                    <a href="https://tw.stock.yahoo.com/quote/5347.TW" target="_blank" class="stock-pill">5347 世界</a>
+                                    <a href="https://tw.stock.yahoo.com/quote/8277.TW" target="_blank" class="stock-pill">8277 大中</a>
+                                    <a href="https://tw.stock.yahoo.com/quote/2342.TW" target="_blank" class="stock-pill">2342 茂矽</a>
+                                </div>
+                                <p class="text-sm text-slate-600">
+                                    擁抱「台積電大聯盟」，<strong class="text-indigo-600">世界先進</strong> 獲台積電高壓/低壓製程授權，投信穩健買盤護航；大中強勢創高；茂矽具低位階補<span class="up">漲</span>空間。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- 右側側邊欄 (佔 1 欄) -->
+            <div class="space-y-6">
+                
+                <!-- 操盤心法 -->
+                <div class="bg-slate-800 text-white p-6 rounded-3xl shadow-lg relative overflow-hidden">
+                    <div class="absolute -right-4 -top-4 text-slate-700 opacity-40"><i class="fas fa-chess-knight text-8xl"></i></div>
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold mb-4 text-amber-400"><i class="fas fa-fire mr-2"></i> K線大師 5 大心法</h3>
+                        <ul class="text-sm space-y-3 text-slate-300">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check-circle text-amber-500 mt-1"></i>
+                                <span><strong class="text-white">買強不買弱：</strong> 汰弱留強，只做還沒走弱的強勢多頭。</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check-circle text-amber-500 mt-1"></i>
+                                <span><strong class="text-white">買低不追高：</strong> 盡量尋找低位階、剛轉強的標的。</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check-circle text-amber-500 mt-1"></i>
+                                <span><strong class="text-white">順勢不逆勢：</strong> 大盤仍是多頭，拉回找買點。</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check-circle text-amber-500 mt-1"></i>
+                                <span><strong class="text-white">停損不套牢：</strong> 只要會停損，就永遠不會被套牢。</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check-circle text-amber-500 mt-1"></i>
+                                <span><strong class="text-white">停利不猶豫：</strong> 該賣的時候（如島型反轉）絕不能貪戀。</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 籌碼健診 -->
+                <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100 hover-card">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-bold"><i class="fas fa-search-dollar text-purple-500 mr-2"></i> CPO 與處置股健診</h3>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-4">矽光子 (CPO) 籌碼一半好一半壞，如何挑選？</p>
+                    
+                    <div class="space-y-4">
+                        <div class="p-3 bg-purple-50 rounded-xl border border-purple-100">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-slate-700 text-sm">籌碼佳：拉回月線買</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <a href="https://tw.stock.yahoo.com/quote/3450.TW" target="_blank" class="stock-pill text-xs">3450 聯鈞</a>
+                                <a href="https://tw.stock.yahoo.com/quote/4908.TW" target="_blank" class="stock-pill text-xs">4908 前鼎</a>
+                            </div>
+                            <p class="text-xs text-slate-600">主力並未退場。只要回測「上升中的月線」，都是極佳的買點。</p>
+                        </div>
+                        
+                        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-slate-700 text-sm">浪子回頭：破線反彈做</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <a href="https://tw.stock.yahoo.com/quote/4979.TW" target="_blank" class="stock-pill text-xs">4979 華星光</a>
+                            </div>
+                            <p class="text-xs text-slate-600">籌碼稍亂且跌破月線，但位階變甜。跌破「上升月線」可搶短反彈，目標抓 10% 即跑。</p>
+                        </div>
+
+                        <div class="p-3 bg-orange-50 rounded-xl border border-orange-100">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold text-slate-700 text-sm">處置股戰法</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <a href="https://tw.stock.yahoo.com/quote/3653.TW" target="_blank" class="stock-pill text-xs">3653 健策</a>
+                                <a href="https://tw.stock.yahoo.com/quote/2486.TW" target="_blank" class="stock-pill text-xs">2486 一詮</a>
+                            </div>
+                            <p class="text-xs text-slate-600">觀察 20 分鐘撮合是否有「平衡點」（法人停損賣壓竭盡）。出關前一天拉回是買點，出關第一天開高是賣點！</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 籌碼比較視覺化 -->
+                <div class="bg-white p-5 rounded-3xl shadow-sm border border-slate-100">
+                    <h3 class="text-sm font-bold text-slate-700 mb-3 text-center">矽光子(CPO) 籌碼強弱指標</h3>
+                    <div class="h-40 w-full relative">
+                        <canvas id="cpoChart"></canvas>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="bg-slate-100 mt-12 py-8 border-t border-slate-200">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-slate-500 font-bold mb-2"><i class="fas fa-book-open text-indigo-400 mr-1"></i> 財經精選筆記</p>
+            <p class="text-xs text-slate-400">本網頁內容擷取自《理財達人秀》節目，僅供學習與資訊交流，不構成任何具體投資建議。<br>投資理財有賺有賠，請自行評估風險。</p>
+        </div>
+    </footer>
+
+    <!-- Chart.js 圖表設定 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Chart.defaults.font.family = "'Noto Sans TC', sans-serif";
+            Chart.defaults.color = '#64748b'; 
+
+            // CPO 籌碼強弱示意圖
+            const ctxCpo = document.getElementById('cpoChart').getContext('2d');
+            new Chart(ctxCpo, {
+                type: 'bar',
+                data: {
+                    labels: ['聯鈞 (籌碼佳)', '前鼎 (籌碼佳)', '華星光 (搶反彈)'],
+                    datasets: [{
+                        label: '主力集中度/強度評估',
+                        data: [85, 78, 40],
+                        backgroundColor: [
+                            'rgba(16, 185, 129, 0.8)', // Emerald
+                            'rgba(16, 185, 129, 0.8)', // Emerald
+                            'rgba(244, 63, 94, 0.8)'   // Rose
+                        ],
+                        borderRadius: 6,
+                        barPercentage: 0.5
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { 
+                        legend: { display: false },
+                        tooltip: { enabled: false }
+                    },
+                    scales: {
+                        x: { 
+                            beginAtZero: true, 
+                            max: 100,
+                            grid: { display: false, drawBorder: false },
+                            ticks: { display: false }
+                        },
+                        y: { 
+                            grid: { display: false, drawBorder: false },
+                            ticks: { font: { weight: 'bold' } }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
